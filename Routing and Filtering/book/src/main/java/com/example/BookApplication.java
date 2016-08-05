@@ -1,7 +1,7 @@
 package com.example;
 
 
-
+import java.util.concurrent.TimeUnit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +13,14 @@ public class BookApplication {
 
     @RequestMapping(value = "/available")
     public String available() {
+
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            //e.printStackTrace();
+        }
+
         return "Spring in Action";
     }
 
