@@ -1,6 +1,7 @@
 package config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+
 @ConfigurationProperties(prefix = "zuul.mysql")
 public class MysqlConfig {
 
