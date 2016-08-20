@@ -1,4 +1,6 @@
 package config;
+//import java.awt.SystemColor;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 
@@ -8,7 +10,6 @@ public class MysqlConfig {
     private String db;
 
     public static void hello() {
-        System.out.print("Hello, ");
     }
 
     public String getDb() {

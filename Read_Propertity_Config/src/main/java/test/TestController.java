@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-fwef
-
 @RestController
 public class TestController {
 
@@ -20,7 +18,7 @@ public class TestController {
 
     @RequestMapping("/test")
     public @ResponseBody String test(){
-        System.out.println(config.getDb());
+        System.out.println("good123:"+ config.getDb());
         return "ok";
     }
 
