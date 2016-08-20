@@ -19,5 +19,4 @@ public class MysqlConfig {
         this.db = db;
     }
 
-
 }
