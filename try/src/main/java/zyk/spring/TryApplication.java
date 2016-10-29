@@ -50,7 +50,11 @@ public class TryApplication {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         HelloWorld obj = (HelloWorld)context.getBean("helloWorld");
         obj.getMessage();
+
         context.registerShutdownHook();
+
+        HelloIndia obj1 = (HelloIndia)context.getBean("helloIndia");
+        obj1.getMessage();
 
     }
 }

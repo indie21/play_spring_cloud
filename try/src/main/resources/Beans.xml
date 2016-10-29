@@ -11,6 +11,13 @@
   </bean>
 
 
+  <bean id="helloIndia" class="zyk.spring.HelloIndia" parent="helloWorld">
+    <property name="message" value="Hello Good News !"/>
+    <property name="name" value="jerry !"/>
+  </bean>
+
+
+
   <bean class="zyk.spring.InitHelloWorld" />
 
 </beans>
