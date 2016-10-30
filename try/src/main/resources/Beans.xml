@@ -20,4 +20,13 @@
 
   <bean class="zyk.spring.InitHelloWorld" />
 
+
+  <bean id="textEditor" class="zyk.spring.TextEditor">
+    <constructor-arg ref="spellChecker"/>
+  </bean>
+
+  <bean id="spellChecker" class="zyk.spring.SpellChecker">
+  </bean>
+
+
 </beans>

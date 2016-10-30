@@ -14,7 +14,7 @@ package zyk.spring;
 
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
@@ -42,13 +42,18 @@ public class TryApplication {
         // obj1.getMessage();
         // obj2.getMessage();
 
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        HelloWorld obj = (HelloWorld)context.getBean("helloWorld");
-        obj.getMessage();
-        context.registerShutdownHook();
+        // AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        // HelloWorld obj = (HelloWorld)context.getBean("helloWorld");
+        // obj.getMessage();
+        // context.registerShutdownHook();
 
-        HelloIndia obj1 = (HelloIndia)context.getBean("helloIndia");
-        obj1.getMessage();
+        // HelloIndia obj1 = (HelloIndia)context.getBean("helloIndia");
+        // obj1.getMessage();
+
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        TextEditor te = (TextEditor)context.getBean("textEditor");
+        te.spellCheck();
 
     }
 }
