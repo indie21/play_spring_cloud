@@ -20,12 +20,16 @@
 
   <bean class="zyk.spring.InitHelloWorld" />
 
-
   <bean id="textEditor" class="zyk.spring.TextEditor">
     <constructor-arg ref="spellChecker"/>
   </bean>
 
   <bean id="spellChecker" class="zyk.spring.SpellChecker">
+  </bean>
+
+  <bean id = "student" class="zyk.spring.Student">
+    <property name="name" value="jerry !"/>
+    <property name="age" value="2323"/>
   </bean>
 
 

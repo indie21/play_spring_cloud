@@ -51,9 +51,17 @@ public class TryApplication {
         // obj1.getMessage();
 
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        TextEditor te = (TextEditor)context.getBean("textEditor");
-        te.spellCheck();
+        // ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        // TextEditor te = (TextEditor)context.getBean("textEditor");
+        // te.spellCheck();
+
+
+        ApplicationContext context =
+            new ClassPathXmlApplicationContext("Beans.xml");
+
+        Student student = (Student) context.getBean("student");
+        System.out.println("Name : " + student.getName() );
+        System.out.println("Age : " + student.getAge() );
 
     }
 }
