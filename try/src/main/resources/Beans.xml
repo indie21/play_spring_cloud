@@ -10,27 +10,11 @@
     <property name="message" value="Hello Good News !"/>
   </bean>
 
+   <bean id="cStartEventHandler" 
+         class="zyk.spring.CStartEventHandler"/>
 
-  <bean id="helloIndia" class="zyk.spring.HelloIndia" parent="helloWorld">
-    <property name="message" value="Hello Good News !"/>
-    <property name="name" value="jerry !"/>
-  </bean>
-
-
-
-  <bean class="zyk.spring.InitHelloWorld" />
-
-  <bean id="textEditor" class="zyk.spring.TextEditor">
-    <constructor-arg ref="spellChecker"/>
-  </bean>
-
-  <bean id="spellChecker" class="zyk.spring.SpellChecker">
-  </bean>
-
-  <bean id = "student" class="zyk.spring.Student">
-    <property name="name" value="jerry !"/>
-    <property name="age" value="2323"/>
-  </bean>
+   <bean id="cStopEventHandler" 
+         class="zyk.spring.CStopEventHandler"/>
 
 
 </beans>

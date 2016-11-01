@@ -1,20 +1,25 @@
 package zyk.spring;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class TryApplication {
 
     public static void main(String[] args) {
+        ConfigurableApplicationContext context =
+            new ClassPathXmlApplicationContext("Beans.xml");
 
-        ApplicationContext ctx =
-            new AnnotationConfigApplicationContext(TextEditorConfig.class);
+        // Let us raise a start event.
+        context.start();
 
-        TextEditor te = ctx.getBean(TextEditor.class);
-        te.spellCheck();
+        HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 
+        obj.getMessage();
+
+        // Let us raise a stop event.
+        context.stop();
     }
 
 }
