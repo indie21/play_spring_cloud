@@ -11,15 +11,12 @@ public class TryApplication {
         ConfigurableApplicationContext context =
             new ClassPathXmlApplicationContext("Beans.xml");
 
-        // Let us raise a start event.
-        context.start();
+        CustomEventPublisher cvp =
+            (CustomEventPublisher) context.getBean("customEventPublisher");
 
-        HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+        cvp.publish();
+        cvp.publish();
 
-        obj.getMessage();
-
-        // Let us raise a stop event.
-        context.stop();
     }
 
 }
